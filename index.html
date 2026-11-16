@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#dcecff">
+  <meta name="description" content="A little penguin-themed birthday surprise for Ms. Maem.">
+  <title>Happy Birthday, Ms. Maem! 🐧💗</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span></div>
+
+  <main>
+    <section id="welcome" class="welcome-screen">
+      <div class="welcome-cloud cloud-one"></div><div class="welcome-cloud cloud-two"></div>
+      <div class="welcome-content">
+        <p class="eyebrow">A LITTLE SURPRISE JUST FOR YOU</p>
+        <div class="penguin-wrap welcome-penguin">
+          <img src="assets/images/penguin.png" alt="Cute baby-blue penguin with a pink heart">
+          <span class="heart-float">♥</span>
+        </div>
+        <h1>Someone special<br><em>has a birthday today!</em></h1>
+        <p class="welcome-name">Happy Birthday, Ms. Maem! <span>🐧💗</span></p>
+        <p class="date-line">NOVEMBER 17, 2026</p>
+        <button class="primary-btn" id="open-surprise">Open your birthday surprise <span>♡</span></button>
+        <p class="tiny-note">Made with friendship, a little chaos, and lots of love.</p>
+      </div>
+      <div class="balloon balloon-a"></div><div class="balloon balloon-b"></div><div class="balloon balloon-c"></div>
+      <div class="sparkle s1">✦</div><div class="sparkle s2">✧</div><div class="sparkle s3">♡</div>
+    </section>
+
+    <div id="birthday-site" class="hidden">
+      <nav class="top-nav">
+        <a href="#home" class="brand"><span class="brand-penguin">🐧</span> a little note for Maem</a>
+        <div class="nav-links"><a href="#memories">Memories</a><a href="#letter">A letter</a><a href="#cake">Make a wish</a></div>
+        <a class="nav-heart" href="#final" aria-label="Go to final surprise">♡</a>
+      </nav>
+
+      <section id="home" class="hero section-pad">
+        <div class="hero-copy">
+          <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+          <h2>Happy Birthday,<br><em>Ms. Maem!</em></h2>
+          <p class="hero-lead">To my gorgeous and beautiful girl who somehow became one of my favorite people.</p>
+          <p class="hero-sub">Here's a tiny corner of the internet filled with memories, sweet treats, and reminders of how appreciated you are.</p>
+          <a class="secondary-btn" href="#memories">Let's celebrate <span>↓</span></a>
+        </div>
+        <div class="hero-art">
+          <div class="hero-halo"></div>
+          <img src="assets/images/penguin.png" alt="The birthday penguin" class="hero-penguin">
+          <span class="hero-sticker sticker-heart">♡</span><span class="hero-sticker sticker-star">✦</span>
+          <div class="mini-note">best friend<br>energy ✨</div>
+          <div class="hero-balloon hb1"></div><div class="hero-balloon hb2"></div>
+        </div>
+        <div class="scroll-hint">SCROLL A LITTLE <span>↓</span></div>
+      </section>
+
+      <section id="memories" class="memories section-pad">
+        <div class="section-heading">
+          <p class="eyebrow">LITTLE MOMENTS, BIG MEMORIES</p>
+          <h2>A gallery of <em>you</em></h2>
+          <p>Some snapshots of a person who makes ordinary days more memorable.</p>
+        </div>
+        <div class="photo-grid">
+          <figure class="photo-card photo-tall"><button class="photo-open" data-full="assets/images/maem-photo-1.png" aria-label="Enlarge photo"><img src="assets/images/maem-photo-1.png" alt="Maem smiling in a white graphic shirt"><span class="photo-zoom">↗</span></button><figcaption>My favorite birthday girl! <span>♡</span></figcaption></figure>
+          <figure class="photo-card photo-offset"><button class="photo-open" data-full="assets/images/maem-photo-2.png" aria-label="Enlarge photo"><img src="assets/images/maem-photo-2.png" alt="A portrait of Maem"><span class="photo-zoom">↗</span></button><figcaption>Pretty girl energy. <span>✦</span></figcaption></figure>
+          <figure class="photo-card photo-placeholder"><button class="photo-open" data-full="assets/images/maem-photo-3.png" aria-label="Enlarge photo"><img src="assets/images/maem-photo-3.png" alt="Maem in a colorful outfit"><span class="photo-zoom">↗</span></button><figcaption>One of my favorite people. <span>♡</span></figcaption></figure>
+          <figure class="photo-card photo-placeholder"><button class="photo-open" data-full="assets/images/maem-photo-4.png" aria-label="Enlarge photo"><img src="assets/images/maem-photo-4.png" alt="Maem in a colorful outfit"><span class="photo-zoom">↗</span></button><figcaption>Memories worth keeping. <span>♡</span></figcaption></figure>
+          <figure class="photo-card photo-placeholder"><button class="photo-open" data-full="assets/images/maem-photo-5.png" aria-label="Enlarge photo"><img src="assets/images/maem-photo-5.png" alt="Maem in a colorful outfit"><span class="photo-zoom">↗</span></button><figcaption>My chaotic best friend. <span>✦</span></figcaption></figure>
+          <figure class="photo-card photo-placeholder"><button class="photo-open" data-full="assets/images/maem-photo-6.jpg" aria-label="Enlarge photo"><img src="assets/images/maem-photo-6.jpg" alt="Maem in a colorful outfit"><span class="photo-zoom">↗</span></button><figcaption>Forever grateful for this friendship. <span>♡</span></figcaption></figure>
+        </div>
+        <p class="gallery-tip">Your photo collection can grow: replace the placeholder cards with your own pictures in <code>index.html</code>.</p>
+      </section>
+
+      <section id="letter" class="letter-section section-pad">
+        <div class="section-heading">
+          <p class="eyebrow">SOMETHING FROM THE HEART</p>
+          <h2>A little letter <em>for you</em></h2>
+          <p>There's something I wanted to tell you today.</p>
+        </div>
+        <div class="letter-layout">
+          <div class="envelope-area">
+            <button id="envelope" class="envelope" aria-label="Open your birthday letter">
+              <span class="envelope-heart">♡</span><span class="envelope-flap"></span><span class="envelope-paper">A letter<br>for Maem</span>
+            </button>
+            <p class="envelope-hint" id="envelope-hint">Tap the envelope to open ♡</p>
+          </div>
+          <article class="letter-paper" id="letter-paper" aria-live="polite">
+            <div class="letter-top">DEAR MS. MAEM <span>♡</span></div>
+            <div class="letter-copy">
+              <p>Happy Birthday to the gorgeous and beautiful girl I never expected to become my best friend!</p>
+              <p>Who would have thought that someone as OA, maarte, spoiled brat, selosa, and sometimes such a little dragon as you would become one of the people I treasure the most?</p>
+              <p>You can be dramatic sometimes, overthink the smallest things, get mad, and throw tantrums, but those little things are part of what makes you YOU.</p>
+              <p>I know that sometimes we hurt each other's feelings, and there are moments when things are not always easy. But despite that, I still care about you, appreciate you, and value the friendship we have.</p>
+              <p>I want you to know that I'm still here. Even on days when we misunderstand each other or when I get hurt, it doesn't erase how grateful I am to have met you.</p>
+              <p>Thank you for being my best friend, for the memories, the laughter, the random conversations, and all the little moments we share.</p>
+              <p>Never forget how beautiful, special, and appreciated you are.</p>
+              <p>I hope this new chapter of your life brings you genuine happiness, exciting opportunities, peaceful days, and everything your heart wishes for.</p>
+              <p>Stay gorgeous, stay funny, stay a little dramatic, and never lose the wonderful person you are.</p>
+              <p class="letter-signoff">Happy Birthday, Ms. Maem!<br>With love and appreciation,<br>Your Ms. Queen If i am still be your? 💗🐧</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="cake" class="cake-section section-pad">
+        <div class="section-heading">
+          <p class="eyebrow">MAKE A WISH, BIRTHDAY GIRL</p>
+          <h2>A little more <em>sweetness</em></h2>
+          <p>One candle for every lovely thing waiting for you this year.</p>
+        </div>
+        <div class="cake-stage">
+          <div class="cake-glow"></div>
+          <div class="cake">
+            <div class="candles"><span class="candle"><i></i></span><span class="candle"><i></i></span><span class="candle"><i></i></span></div>
+            <div class="cake-top"><span class="strawberry">♥</span><span class="cream-dot"></span><span class="choc-chip">◆</span><span class="strawberry second">♥</span></div>
+            <div class="cake-layer layer-top"></div><div class="ganache"></div><div class="cake-layer layer-bottom"></div>
+            <div class="cake-plate"></div>
+          </div>
+          <div class="cake-side-note">made of<br>chocolate &<br>good wishes</div>
+        </div>
+        <button class="primary-btn wish-btn" id="wish-button">Make a birthday wish ✨</button>
+        <p class="wish-message" id="wish-message">Make a wish, birthday girl! May all your dreams come true! 🎂💗</p>
+      </section>
+
+      <section class="balloon-section section-pad">
+        <div class="section-heading">
+          <p class="eyebrow">A POP OF HAPPINESS</p>
+          <h2>Little reminders <em>for you</em></h2>
+          <p>Choose a balloon and see what's inside. Every message is yours to keep.</p>
+        </div>
+        <div class="balloon-row">
+          <button class="message-balloon pink" data-message="You are appreciated, more than you know!">♡</button>
+          <button class="message-balloon blue" data-message="Stay beautiful, inside and out.">✦</button>
+          <button class="message-balloon lilac" data-message="Keep shining in your own lovely way.">♡</button>
+          <button class="message-balloon cream" data-message="You deserve genuine happiness and good things.">✧</button>
+          <button class="message-balloon pink" data-message="Thank you for being my best friend!">♡</button>
+        </div>
+        <div class="balloon-message" id="balloon-message" aria-live="polite">Tap a balloon to reveal a tiny birthday note.</div>
+      </section>
+
+      <section id="final" class="final-section section-pad">
+        <div class="final-penguins"><img src="assets/images/penguin.png" alt="Penguin holding a heart"><span>🐧</span><span>🐧</span></div>
+        <p class="eyebrow">ONE LAST THING...</p>
+        <h2>I'm really glad<br><em>we met.</em></h2>
+        <p class="final-message">Thank you for being one of the best people I met. No matter how chaotic, dramatic, or stubborn you can be, I'm grateful that you became my best friend.</p>
+        <p class="final-message">Here's to more memories, laughter, random conversations, and years of friendship!</p>
+        <div class="final-greeting">HAPPY BIRTHDAY,<br><span>MS. MAEM!</span> 🐧💗</div>
+        <p class="date-line">NOVEMBER 17, 2026</p>
+        <button class="secondary-btn replay-btn" id="replay">Replay the surprise ↻</button>
+        <div class="footer-note">A little birthday website, made with lots of appreciation. ♡</div>
+      </section>
+    </div>
+  </main>
+
+  <div class="music-player" id="music-player">
+    <div class="music-icon">♫</div>
+    <div class="music-info"><strong id="song-title">Your birthday playlist</strong><span id="song-status">Add songs to assets/music</span></div>
+    <button id="prev-song" class="music-control" aria-label="Previous song">|◀</button>
+    <button id="play-song" class="music-control play-control" aria-label="Play music">▶</button>
+    <button id="next-song" class="music-control" aria-label="Next song">▶|</button>
+    <audio id="audio" preload="none"></audio>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo preview">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close photo">×</button>
+    <img id="lightbox-image" src="" alt="Enlarged memory">
+  </div>
+  <div id="confetti-layer" aria-hidden="true"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
