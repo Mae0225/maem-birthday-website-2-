@@ -68,9 +68,9 @@ document.querySelectorAll(".message-balloon").forEach((balloon) => {
 
 // Lightweight local-file music player. Add MP3 files to assets/music and list them here.
 const playlist = [
-  { title: "Song 1", src: "assets/music/song1.mp3" },
-  { title: "Song 2", src: "assets/music/song2.mp3" },
-  { title: "Song 3", src: "assets/music/song3.mp3" }
+  { title: "Song 1", src: "song1.mp3" },
+  { title: "Song 2", src: "song2.mp3" },
+  { title: "Song 3", src: "song3.mp3" }
 ];
 const audio = $("#audio");
 let currentSong = 0;
