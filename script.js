@@ -67,51 +67,82 @@ document.querySelectorAll(".message-balloon").forEach((balloon) => {
 });
 
 // Lightweight local-file music player. Add MP3 files to assets/music and list them here.
+
+// Birthday Music Player
+
 const playlist = [
-  { title: "Song 1", src: "song1.mp3" },
-  { title: "Song 2", src: "song2.mp3" },
-  { title: "Song 3", src: "song3.mp3" }
+  { title: "Song 1", src: "./song1.mp3" },
+  { title: "Song 2", src: "./song2.mp3" },
+  { title: "Song 3", src: "./song3.mp3" }
 ];
-const audio = $("#audio");
+
+const audio = document.querySelector("#audio");
+const playButton = document.querySelector("#play-song");
+const songTitle = document.querySelector("#song-title");
+const songStatus = document.querySelector("#song-status");
+
 let currentSong = 0;
-let isPlaying = false;
+
 function loadSong(index) {
   currentSong = (index + playlist.length) % playlist.length;
+
+  audio.pause();
   audio.src = playlist[currentSong].src;
-  $("#song-title").textContent = playlist[currentSong].title;
-  $("#song-status").textContent = "Ready when you are ♡";
-  $("#play-song").textContent = "▶";
-  isPlaying = false;
+  audio.load();
+
+  songTitle.textContent = playlist[currentSong].title;
+  songStatus.textContent = "Ready when you are ♡";
+  playButton.textContent = "▶";
 }
-async function toggleMusic() {
-  if (!audio.src) loadSong(currentSong);
-  if (isPlaying) {
-    audio.pause();
-    isPlaying = false;
-    $("#play-song").textContent = "▶";
-    $("#song-status").textContent = "Paused";
-  } else {
-    try {
-      await audio.play();
-      isPlaying = true;
-      $("#play-song").textContent = "Ⅱ";
-      $("#song-status").textContent = "Now playing ♫";
-    } catch (error) {
-      $("#song-status").textContent = "Add MP3 files to assets/music";
-      isPlaying = false;
-    }
+
+async function playMusic() {
+  try {
+    await audio.play();
+    playButton.textContent = "Ⅱ";
+    songStatus.textContent = "Now playing ♫";
+  } catch (error) {
+    console.error("Music error:", error);
+    songStatus.textContent = "Unable to play. Check the MP3 file path.";
+    playButton.textContent = "▶";
   }
 }
-$("#play-song").addEventListener("click", toggleMusic);
-$("#prev-song").addEventListener("click", () => { loadSong(currentSong - 1); toggleMusic(); });
-$("#next-song").addEventListener("click", () => { loadSong(currentSong + 1); toggleMusic(); });
-audio.addEventListener("ended", () => { loadSong(currentSong + 1); toggleMusic(); });
-audio.addEventListener("error", () => {
-  isPlaying = false;
-  $("#play-song").textContent = "▶";
-  $("#song-status").textContent = "Add your MP3 files in assets/music";
+
+function pauseMusic() {
+  audio.pause();
+  playButton.textContent = "▶";
+  songStatus.textContent = "Paused";
+}
+
+playButton.addEventListener("click", () => {
+  if (audio.paused) {
+    playMusic();
+  } else {
+    pauseMusic();
+  }
 });
+
+document.querySelector("#prev-song").addEventListener("click", () => {
+  loadSong(currentSong - 1);
+  playMusic();
+});
+
+document.querySelector("#next-song").addEventListener("click", () => {
+  loadSong(currentSong + 1);
+  playMusic();
+});
+
+audio.addEventListener("ended", () => {
+  loadSong(currentSong + 1);
+  playMusic();
+});
+
+audio.addEventListener("error", () => {
+  playButton.textContent = "▶";
+  songStatus.textContent = "Song unavailable. Check your MP3 file.";
+});
+
 loadSong(0);
+
 
 // Replay takes the visitor back to the welcome screen and resets the little surprises.
 $("#replay").addEventListener("click", () => {
